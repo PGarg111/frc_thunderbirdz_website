@@ -1,7 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@500&display=swap');
+
 :root {
     --muted: #9ca3af;
-    --fg: #000000;
-    --bg: #e9f5ff;
+    --fg: white;
+    --bg: #2c0735;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 25;
@@ -9,20 +12,31 @@
     --line: #8492a6c0;
 }
 
+body {
+    background: var(--bg);
+}
+
 .navbar {
-    margin-right: 50px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding-left: 10px;
     margin-top: 10px;
-    background: none;
+    background: var(--bg);
+    color: var(--fg);
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     width: 100%;
+    padding-bottom: 15px;
+    /* border-bottom: 0.5px solid rgba(128, 128, 128, 0.51); */
 }
 
 .navbar button {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 25;
+    font-weight: 500;
     font-style: normal;
     margin-right: 8px;
     border: none;
@@ -30,6 +44,7 @@
     position: relative;
     padding: 4px 6px;
     background: transparent;
+    color: var(--fg);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -41,7 +56,7 @@
     height: 3px;
     bottom: -2px;
     left: 0;
-    background: linear-gradient(#97dffc, #858ae3);
+    background: linear-gradient(#97dffc, #613dc1);
     transform: scaleX(0);
     transform-origin: bottom left;
     transition: transform 0.3s ease-out;
@@ -49,24 +64,9 @@
 
 .navbar button:hover {
     transform: scale(1.08);
-    color: #858ae3;
+    color: #613dc1;
 }
 
 .navbar button:hover::after {
     transform: scaleX(1);
-}
-
-/* .highlight {
-    background-size: 0% 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
-    animation: highlighted 1.5s ease-out 1s forwards;
-    padding: 2px 4px;
-} */
-
-@keyframes highlighted {
-    to {
-        background-size: 100% 100%;
-        color: white;
-    }
 }
