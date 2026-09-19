@@ -1,0 +1,72 @@
+:root {
+    --muted: #9ca3af;
+    --fg: #000000;
+    --bg: #e9f5ff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 25;
+    font-style: normal;
+    --line: #8492a6c0;
+}
+
+.navbar {
+    margin-right: 50px;
+    margin-top: 10px;
+    background: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar button {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 25;
+    font-style: normal;
+    margin-right: 8px;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    padding: 4px 6px;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(#97dffc, #858ae3);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar button:hover {
+    transform: scale(1.08);
+    color: #858ae3;
+}
+
+.navbar button:hover::after {
+    transform: scaleX(1);
+}
+
+/* .highlight {
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    animation: highlighted 1.5s ease-out 1s forwards;
+    padding: 2px 4px;
+} */
+
+@keyframes highlighted {
+    to {
+        background-size: 100% 100%;
+        color: white;
+    }
+}
