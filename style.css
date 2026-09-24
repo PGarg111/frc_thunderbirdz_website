@@ -64,7 +64,7 @@ body {
 
 .navbar button:hover {
     transform: scale(1.08);
-    color: #613dc1;
+    color: #97dffc;
 }
 
 .navbar button:hover::after {
